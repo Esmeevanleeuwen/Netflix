@@ -16,5 +16,17 @@
     </div>
 </div>
 
+<div>
+    <p>movie</p>
+</div>
+
+<div>
+    <?php
+    #set all movies
+    ?>
+</div>
+
+
+
 </body>
 </html>
