@@ -151,6 +151,37 @@ require_once('db_connection.php');
             </div>
         </div>
     </div>
+    <footer>
+        <div class="wrapper">
+
+            <ul>
+                <img class="logo" src="images/fb_logo.JPG"> 
+                <img class="logo" src="images/ig_logo.JPG">
+                <img class="logo" src="images/tw_logo.JPG">  
+                <img class="logo" src="images/yt_logo.JPG"><br><br>
+                <li>Audio en ondertiteling</li>
+                <li>Helpcenterum</li>
+                <li>Nederland, the netherlands</li>
+                <li>Mediacenter</li>
+            </ul>
+            <ul>
+                <li>Audiodescriptie</li>
+                <li>Cadeaubonnen</li>
+                <li>Gebruiksvoorwaarden</li>
+                <li>Wettelijke bepalingen</li>
+            </ul>
+            <ul>
+                <li><a href="">Blog</a></li>
+                <li><a href="">Werk</a></li>
+                <li><a href="">Prive beleid</a></li>
+                <li><a href="">Contact</a></li>
+            </ul>
+            <ul>
+                <li>&copy; alle rechten behouden 2021 </li>
+
+            </ul>
+        </div>
+    </footer>
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
 </body>
 </html>
