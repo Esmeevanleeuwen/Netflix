@@ -16,7 +16,7 @@ require_once('db_connection.php');
 <body>
     <nav class="background">
         <img class="logo" src="images/Netflix_Logo_RGB.png">
-        <button class="login-button" type="button">Inloggen</button>
+        <a href="login.php"><button class="login-button" type="button">Inloggen</button></a>
     </nav>
     <div class="container">
         <div class="row">
@@ -80,7 +80,7 @@ require_once('db_connection.php');
             <div class="col-md-12">
                 <h2 class="center">Veelgestelde vragen</h2>
                 <div class="space"></div>
-                <div class="accordion accordion-flush" id="accordionFlushExample">
+                <div class="accordion accordion-flush center" id="accordionFlushExample">
                     <div class="accordion-item">
                         <h2 class="accordion-header" id="flush-headingOne">
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
@@ -99,7 +99,8 @@ require_once('db_connection.php');
                         </button>
                         </h2>
                         <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
-                        <div class="accordion-body">Netflix is een streamingservice met een zeer groot aanbod van bekroonde series, films, anime, documentaires en nog veel meer op duizenden apparaten met een internetverbinding. Je kijkt zo veel je wilt, wanneer je wilt, zonder enige vorm van reclame. En dit allemaal voor één lage prijs per maand. Er valt altijd iets nieuws te ontdekken en elke week worden er nieuwe series en films toegevoegd!</div>
+                        <div class="accordion-body">Netflix is een streamingservice met een zeer groot aanbod van bekroonde series, films, anime, documentaires en nog veel meer op duizenden apparaten met een internetverbinding. 
+                            <br><br>Je kijkt zo veel je wilt, wanneer je wilt, zonder enige vorm van reclame. En dit allemaal voor één lage prijs per maand. Er valt altijd iets nieuws te ontdekken en elke week worden er nieuwe series en films toegevoegd!</div>
                         </div>
                     </div>
                     <div class="little-space"></div>
@@ -121,7 +122,8 @@ require_once('db_connection.php');
                         </button>
                         </h2>
                         <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlushExample">
-                        <div class="accordion-body">Kijk altijd en overal op een onbeperkt aantal apparaten. Log in bij je account op de Netflix-website om direct online te kijken vanaf je computer of op een apparaat met een internetverbinding en de Netflix-app, zoals smart-tv's, smartphones, tablets, mediaspelers en gameconsoles. Je kunt je favoriete series ook downloaden via de iOS-, Android- of Windows 10-app. Gebruik de downloadfunctie om onderweg en wanneer je geen internetverbinding hebt, te kunnen kijken. Neem Netflix overal mee.</div>
+                        <div class="accordion-body">Kijk altijd en overal op een onbeperkt aantal apparaten. Log in bij je account op de Netflix-website om direct online te kijken vanaf je computer of op een apparaat met een internetverbinding en de Netflix-app, zoals smart-tv's, smartphones, tablets, mediaspelers en gameconsoles. 
+                            <br><br>Je kunt je favoriete series ook downloaden via de iOS-, Android- of Windows 10-app. Gebruik de downloadfunctie om onderweg en wanneer je geen internetverbinding hebt, te kunnen kijken. Neem Netflix overal mee.</div>
                         </div>
                     </div>
                     <div class="little-space"></div>
@@ -143,45 +145,52 @@ require_once('db_connection.php');
                         </button>
                         </h2>
                         <div id="flush-collapseSix" class="accordion-collapse collapse" aria-labelledby="flush-headingSix" data-bs-parent="#accordionFlushExample">
-                        <div class="accordion-body">Netflix Kids maakt onderdeel uit van je lidmaatschap. Ouders kunnen erop vertrouwen dat hun kids gezinsvriendelijke series en films kijken in hun eigen omgeving. Kids-profielen bevatten ouderlijk toezicht met een pincode, dus je kunt een leeftijdsclassificatie instellen voor content die kids mogen kijken. Ook kun je specifieke titels blokkeren die kids niet mogen zien.</div>
+                        <div class="accordion-body">Netflix Kids maakt onderdeel uit van je lidmaatschap. Ouders kunnen erop vertrouwen dat hun kids gezinsvriendelijke series en films kijken in hun eigen omgeving. 
+                            <br><br>Kids-profielen bevatten ouderlijk toezicht met een pincode, dus je kunt een leeftijdsclassificatie instellen voor content die kids mogen kijken. Ook kun je specifieke titels blokkeren die kids niet mogen zien.</div>
                         </div>
                     </div>
+                    <div class="space"></div>
+                    <p class="little-text center">Klaar om te kijken? Voer je e-mailadres in om je lidmaatschap te starten of te hernieuwen.</p>
+                    <input class="email-field" placeholder="E-mailadres" type="email" name="email">
+                    <input class="aanmeld-button" type="submit" value="Aan de slag >">
                 </div>
                 <div class="space"></div>
             </div>
         </div>
     </div>
-    <footer>
-        <div class="wrapper">
+    <div class="gray"></div>
+    <div class="container">
+        <footer>
+            <div class="wrapper">
+                <ul>
+                    <img class="logo" src="images/fb_logo.JPG"> 
+                    <img class="logo" src="images/ig_logo.JPG">
+                    <img class="logo" src="images/tw_logo.JPG">  
+                    <img class="logo" src="images/yt_logo.JPG"><br><br>
+                    <li>Audio en ondertiteling</li>
+                    <li>Helpcenterum</li>
+                    <li>Nederland, the netherlands</li>
+                    <li>Mediacenter</li>
+                </ul>
+                <ul>
+                    <li>Audiodescriptie</li>
+                    <li>Cadeaubonnen</li>
+                    <li>Gebruiksvoorwaarden</li>
+                    <li>Wettelijke bepalingen</li>
+                </ul>
+                <ul>
+                    <li><a href="">Blog</a></li>
+                    <li><a href="">Werk</a></li>
+                    <li><a href="">Prive beleid</a></li>
+                    <li><a href="">Contact</a></li>
+                </ul>
+                <ul>
+                    <li>&copy; alle rechten behouden 2021 </li>
 
-            <ul>
-                <img class="logo" src="images/fb_logo.JPG"> 
-                <img class="logo" src="images/ig_logo.JPG">
-                <img class="logo" src="images/tw_logo.JPG">  
-                <img class="logo" src="images/yt_logo.JPG"><br><br>
-                <li>Audio en ondertiteling</li>
-                <li>Helpcenterum</li>
-                <li>Nederland, the netherlands</li>
-                <li>Mediacenter</li>
-            </ul>
-            <ul>
-                <li>Audiodescriptie</li>
-                <li>Cadeaubonnen</li>
-                <li>Gebruiksvoorwaarden</li>
-                <li>Wettelijke bepalingen</li>
-            </ul>
-            <ul>
-                <li><a href="">Blog</a></li>
-                <li><a href="">Werk</a></li>
-                <li><a href="">Prive beleid</a></li>
-                <li><a href="">Contact</a></li>
-            </ul>
-            <ul>
-                <li>&copy; alle rechten behouden 2021 </li>
-
-            </ul>
-        </div>
-    </footer>
+                </ul>
+            </div>
+        </footer>
+    </div>
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
 </body>
 </html>
