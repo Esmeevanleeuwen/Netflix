@@ -1,11 +1,10 @@
 body {
 	background-color: #000;
+}
+.background {
 	background-image: url('images/background.jpg');
 	background-repeat: no-repeat;
 	background-size: 100% 750px;
-}
-.background {
-	background-color: rgba(0,0,0,.4);
 	height: 750px;
 	position: relative;
 }
@@ -17,7 +16,7 @@ body {
 }
 .login-button {
 	background-color: #E50914;
-	border-radius: 7px;
+	border-radius: 3px;
 	color: #FFF;
 	float: right;
 	font-size: 1rem;
@@ -25,7 +24,7 @@ body {
 	margin-right: 3%;
 	margin-top: 20px;
 	padding: 7px 17px;
-	width: 120px;
+	width: 100px;
 }
 .info {
 	left: 30%;
@@ -56,7 +55,7 @@ p {
 	padding: 10px 10px 0;
 	width: 65%;
 }
-.aanmel-dbutton {
+.aanmeld-button {
 	background-color: #E50914;
 	box-shadow: none;
 	color: #FFF;
@@ -102,9 +101,14 @@ p {
 	margin: auto;
 	width: 87%;
 }
+.accordion {
+	width: 70%;
+}
 .accordion-button {
 	background-color: #303030;
 	color: #FFF;
+	font-size: 1.625rem;
+	padding: .8em 2.2em .8em 1.2em;
 }
 .accordion-button:not(.collapsed) {
 	background-color: #303030;
@@ -114,7 +118,21 @@ p {
 	background-color: #303030;
 	color: #FFF;
 }
-
+.accordion-body {
+	font-size: 1.625rem;
+	text-align: left;
+}
+.login-page {
+    background-image: url('images/background.jpg');
+	background-repeat: no-repeat;
+	background-size: 100%;
+}
+.login-form {
+    width: 50%;
+    height:660px;
+    padding: 60px 68px 40px;
+    background-color: rgba(0,0,0,.75);
+}
 /*footer*/
 .logo{
 	width: 20%;
@@ -122,7 +140,6 @@ p {
 	margin-bottom:10px ;
 }
 footer{
-    background: #141414;
     margin-top: 100px;
     padding: 30px 0;
 }
