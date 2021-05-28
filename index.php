@@ -9,7 +9,7 @@ require_once('db_connection.php');
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="bootstrap-5.0.1-dist/css/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="style.css?v=1.6">
     <title>Netflix 2.0</title>
 </head>
@@ -58,7 +58,7 @@ require_once('db_connection.php');
                     <h2>Kijk overal.</h2>
                     <p>Stream onbeperkt series en films op je telefoon, tablet, laptop en tv, zonder meer te betalen.</p>
                 </div>
-                <img class="img right" src="images/device-pile.png">
+                <img class="img right" src="images/device-pile.png" alt="devicePile">
             </div>
         </div>
     </div>
@@ -163,10 +163,10 @@ require_once('db_connection.php');
         <footer>
             <div class="wrapper">
                 <ul>
-                    <img class="logo" src="images/fb_logo.JPG"> 
-                    <img class="logo" src="images/ig_logo.JPG">
-                    <img class="logo" src="images/tw_logo.JPG">  
-                    <img class="logo" src="images/yt_logo.JPG"><br><br>
+                    <img class="logo" src="images/fb_logo.JPG" alt="facebook logo">
+                    <img class="logo" src="images/ig_logo.JPG" alt="instagram logo">
+                    <img class="logo" src="images/tw_logo.JPG" alt="twitter logo">
+                    <img class="logo" src="images/yt_logo.JPG" alt="youtube logo"><br><br>
                     <li>Audio en ondertiteling</li>
                     <li>Helpcenterum</li>
                     <li>Nederland, the netherlands</li>
