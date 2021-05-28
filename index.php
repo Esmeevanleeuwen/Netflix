@@ -13,7 +13,7 @@ require_once('db_connection.php');
     <link rel="stylesheet" type="text/css" href="style.css?v=1.6">
     <title>Netflix 2.0</title>
 </head>
-<body>
+<body class="index-page">
     <nav class="background">
         <img class="logo" src="images/Netflix_Logo_RGB.png">
         <a href="login.php"><button class="login-button" type="button">Inloggen</button></a>
