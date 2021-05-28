@@ -2,6 +2,10 @@ body {
 	background-color: #141414;
 }
 
+.index-page {
+	background-color: #000;
+}
+
 a {
 	color: #fff !important;
 }
