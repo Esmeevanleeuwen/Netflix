@@ -141,6 +141,37 @@ p {
 	padding: 60px 68px 40px;
 	background-color: rgba(0,0,0,.75);
 }
+
+
+/*esmee*/
+
+/* Gehele content die in main staat valt hier binnen */
+.content{
+	margin: 0 auto;
+	width: 90%;
+  }
+  
+  /* Horizontaal kunnen sliden tussen de plaatjes */
+  .slide{
+	background-color:#000;
+	white-space: nowrap;
+	overflow-x: auto;
+	overflow-y: hidden;
+  }
+  
+  /* Titel van de categorie */
+  .film{
+	color: white;
+	font-size: 20px;
+  }
+  
+  /* Films plaatjes */
+  .films{
+	border-radius: 2%;
+	display: inline-block;
+	margin: 0.5%;
+	max-width: 206px;
+  }
 /*footer*/
 .logo{
 	width: 20%;
