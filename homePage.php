@@ -59,7 +59,8 @@
 <?php
 include_once('db_connection.php');
 
-$sql = "SELECT film_id, film_name, film_descr, film_image, category_id FROM films";
+//$sql = "SELECT film_id, film_name, film_descr, film_image, category_id FROM films";
+$sql = "select * from films as f left join categorys as c on f.category_id = c.category_id";
 
 $q = $connection->prepare($sql);
 $q->execute();
@@ -68,28 +69,32 @@ $q->setFetchMode(PDO::FETCH_ASSOC);
 ?>
 
 <?php
-$films = array();
+$filmData = array();
 while ($film =  $q->fetch())
 {
-    $films[] = $film;
+    $filmData[$film['category_name']][] = $film;
 }
-foreach ($films as $film)
+echo '<pre>';
+print_r($filmData);
+echo '</pre>';
+
+foreach ($filmData as $category => $films )
 {
+    foreach($films as $film){
+
+
     ?>
     <tr>
         <td><?php echo $film['film_id']; ?></td>
         <td><?php echo $film['film_name']; ?></td>
         <td><?php echo $film['film_image']; ?></td>
-        <td><img src="<?php echo $film['film_image']; ?>" alt="series"></td>
+        <td><?php echo $film['category_name']; ?></td>
+<!--        <td><img src="--><?php //echo $film['film_image']; ?><!--" alt="series"></td>-->
     </tr>
 
-    <div class="lineup-carousel">
-        <p><?php echo $film['category_id']; ?></p>
-        <ul>
-            <a href="javascript:void(0)" class="carousel-item"><img src="<?php echo $film['film_image']; ?>" alt="series"></a>
-        </ul>
-    </div>
+
     <?php
+    }
 }
 ?>
 
@@ -98,12 +103,29 @@ foreach ($films as $film)
 <div class="lineup-carousel">
     <p>Continue Watching</p>
     <ul>
-        <a href="javascript:void(0)" class="carousel-item"><img src="images/series/Brooklyn-Nine-Nine.jpg" alt="series"></a>
-        <a href="javascript:void(0)" class="carousel-item"><img src="images/series/Brooklyn-Nine-Nine.jpg" alt="series"></a>
+        <li><a href="javascript:void(0)" class="carousel-item"><img src="images/series/Brooklyn-Nine-Nine.jpg" alt="series"></a></li>
+        <li><a href="javascript:void(0)" class="carousel-item"><img src="images/series/Brooklyn-Nine-Nine.jpg" alt="series"></a></li>
         <a href="javascript:void(0)" class="carousel-item"><img src="images/series/Brooklyn-Nine-Nine.jpg" alt="series"></a>
         <a href="javascript:void(0)" class="carousel-item"><img src="images/series/Brooklyn-Nine-Nine.jpg" alt="series"></a>
         <a href="javascript:void(0)" class="carousel-item"><img src="images/series/Brooklyn-Nine-Nine.jpg" alt="series"></a>
     </ul>
+</div>
+
+<!--<div class="lineup-carousel">-->
+<!--    <p>--><?php //echo $film['category_id']; ?><!--</p>-->
+<!--    <ul>-->
+<!--        <a href="javascript:void(0)" class="carousel-item"><img src="--><?php //echo $film['film_image']; ?><!--" alt="series"></a>-->
+<!--        <a href="javascript:void(0)" class="carousel-item"><img src="--><?php //echo $film['film_image']; ?><!--" alt="series"></a>-->
+<!--        <a href="javascript:void(0)" class="carousel-item"><img src="--><?php //echo $film['film_image']; ?><!--" alt="series"></a>-->
+<!--        <a href="javascript:void(0)" class="carousel-item"><img src="--><?php //echo $film['film_image']; ?><!--" alt="series"></a>-->
+<!--        <a href="javascript:void(0)" class="carousel-item"><img src="--><?php //echo $film['film_image']; ?><!--" alt="series"></a>-->
+<!--        <a href="javascript:void(0)" class="carousel-item"><img src="--><?php //echo $film['film_image']; ?><!--" alt="series"></a>-->
+<!--        <a href="javascript:void(0)" class="carousel-item"><img src="--><?php //echo $film['film_image']; ?><!--" alt="series"></a>-->
+<!--    </ul>-->
+<!--</div>-->
+
+<div class="carousel">
+
 </div>
 
 

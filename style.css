@@ -6,6 +6,10 @@ body {
 	background-color: #000;
 }
 
+.index-page {
+	background-color: #000000;
+}
+
 a {
 	color: #fff !important;
 }
@@ -241,6 +245,8 @@ footer a{
 	display: inline-block;
 	flex: 1 1 0;
 	transition: transform 500ms;
+	margin-right: 0;
+	width: 20%;
 }
 
 .lineup-carousel {
