@@ -76,9 +76,9 @@ while ($film =  $q->fetch())
 //    $filmData[$film['category_name']][] = $film;
     $filmData[$film['name']][] = $film;
 }
-//echo '<pre>';
-//print_r($filmData);
-//echo '</pre>';
+echo '<pre>';
+print_r($filmData);
+echo '</pre>';
 
 foreach ($filmData as $category => $films )
 {
