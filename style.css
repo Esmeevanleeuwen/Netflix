@@ -1,21 +1,16 @@
 body {
 	background-color: #141414;
 }
-
+/* index pagina */
 .index-page {
 	background-color: #000;
 }
-
-.index-page {
-	background-color: #000000;
-}
-
 a {
-	color: #fff !important;
+	color: #fff;
 }
 #trailer-photo {
-	width: 100%;
 	height: 70%;
+	width: 100%;
 }
 .background {
 	background-image: url('images/background.jpg');
@@ -25,10 +20,9 @@ a {
 	position: relative;
 }
 .logo {
-	height: auto;
-	margin-left: 2%;
-	max-width: 200px;
-	width: 100%;
+	float: left;
+	margin-bottom: 10px;
+	width: 20%;
 }
 .login-button {
 	background-color: #E50914;
@@ -138,20 +132,175 @@ p {
 	font-size: 1.625rem;
 	text-align: left;
 }
+/* Inlog pagina*/
 .login-page {
 	background-image: url('images/background.jpg');
 	background-repeat: no-repeat;
 	background-size: 100%;
 }
 .login-form {
-	width: 50%;
-	height:660px;
-	padding: 60px 68px 40px;
 	background-color: rgba(0,0,0,.75);
+	height: 660px;
+	padding: 60px 68px 40px;
+	width: 40%;
+}
+.login-form .input-field {
+	background-color: #293133;
+	border-radius: 4px;
+	color: #FFF;
+	font-size: 16px;
+	height: 50px;
+	padding: 10px 11px;
+	width: 100%;
+}
+.login-form label {
+	color: #b3b3b3;
+	font-size: 13px;
+}
+.login-form a {
+	color: #b3b3b3;
+	font-size: 13px;
+	text-decoration: none;
+}
+.inlog-form i {
+	clear: both;
+}
+.inlog-button {
+	background-color: #E50914 !important;
+	border-radius: 4px;
+	color: #FFF;
+	width: 100%;
+}
+/* Aanmeld pagina */
+.aanmeld-pagina {
+	background-color: #FFF;
+}
+.login {
+	color: #333;
+	font-size: 19px;
+	margin: 0 3%;
+	text-decoration: none;
+}
+.aanmeld-form {
+	height: 660px;
+	padding: 60px 68px 40px;
+	width: 45%;
+}
+.aanmeld-pagina .little-text {
+	color: #333;
+	font-size: 13px;
+	text-align: left;
+}
+.aanmeld-pagina .title {
+	color: #333;
+	font-size: 23px;
+	text-align: left;
+}
+.aanmeld-pagina .text {
+	color: #333;
+	font-size: 19px;
+	text-align: left;
+}
+.aanmeld-pagina .input-field {
+	height: 50px;
+	width: 100%;
+}
+.aanmeld-pagina .link {
+	color: #0071EB;
+	font-size: 19px;
+	text-align: left;
+	text-decoration: none;
+}
+.aanmeld-pagina .checkbox {
+	height: 25px;
+	width: 25px;
+}
+.aanmeld-pagina label {
+	font-size: 16px;
 }
 
 
 /*esmee*/
+
+
+/*footer*/
+footer {
+	margin-top: 100px;
+	padding: 30px 0;
+}
+footer:after {
+	clear: both;
+	content: "";
+	display: block;
+}
+footer ul {
+	color: #eee;
+	float: left;
+	list-style-type: none;
+	margin-right: 2%;
+	padding: 0;
+	width: 23%;
+}
+footer li {
+	margin: 10px 0;
+}
+footer a {
+	color: #eee;
+	text-decoration: none;
+}
+/*Justin*/
+#netflix-logo {
+	max-height: 10%;
+	max-width: 10%;
+}
+.lineup-carousel .carousel-item:hover {
+	transform: scale(1.5);
+	z-index: 1;
+}
+.carousel-item:hover ~ .carousel-item {
+	transform: translateX(25%);
+}
+.carousel-container {
+	display: flex;
+	margin-top: 50px;
+}
+.carousel-item {
+	display: inline-block;
+	flex: 1 1 0;
+	position: relative;
+	transition: transform 500ms;
+}
+.lineup-carousel {
+	background-color: #141414;
+	color: white;
+	left: 5%;
+	overflow-x: scroll;
+	overflow-y: hidden;
+	top: 90%;
+	white-space: nowrap;
+	width: 100%;
+}
+.lineup-carousel ul {
+	display: inline;
+	list-style-type: none;
+	width: 100%;
+}
+.lineup-carousel li {
+	display: inline;
+	list-style-type: none;
+	width: 100%;
+}
+.lineup-carousel img {
+	max-height: 350px;
+	max-width: 350px;
+}
+.dropdown-menu {
+	background-color: #141414;
+}
+
+.dropdown-toggle{
+	display: none;
+}
 
 /* Gehele content die in main staat valt hier binnen */
 .content{
@@ -161,7 +310,7 @@ p {
   
   /* Horizontaal kunnen sliden tussen de plaatjes */
   .slide{
-	background-color:#000;
+	background-color:#141414;
 	white-space: nowrap;
 	overflow-x: auto;
 	overflow-y: hidden;
@@ -214,69 +363,4 @@ footer a{
 	color: #eee;
 	text-decoration: none;
 }
-/*Justin*/
 
-#netflix-logo {
-	max-width: 10%;
-	max-height: 10%;
-}
-
-
-.lineup-carousel .carousel-item:hover {
-	transform: translateX(-25%);
-}
-
-.carousel-item:hover ~ .carousel-item {
-	transform: translateX(25%);
-}
-
-.lineup-carousel .carousel-item:hover {
-	transform: scale(1.5);
-	z-index: 1;
-}
-
-.carousel-container {
-	display: flex;
-	margin-top: 50px;
-}
-
-.carousel-item {
-	position: relative;
-	display: inline-block;
-	flex: 1 1 0;
-	transition: transform 500ms;
-	margin-right: 0;
-	width: 20%;
-}
-
-.lineup-carousel {
-	color: white;
-	background-color: #141414;
-	left: 5%;
-	overflow-x: scroll;
-	overflow-y: hidden;
-	top: 90%;
-	white-space: nowrap;
-	width: 100%;
-}
-
-.lineup-carousel ul {
-	/*overflow-x: scroll;*/
-	/*overflow-y: hidden;*/
-	width: 100%;
-	display: inline;
-	list-style-type: none;
-}
-
-.lineup-carousel li {
-	/*overflow-x: scroll;*/
-	/*overflow-y: hidden;*/
-	width: 100%;
-	display: inline;
-	list-style-type: none;
-}
-
-.lineup-carousel img {
-	max-width: 350px;
-	max-height: 350px;
-}
