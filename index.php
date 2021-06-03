@@ -10,7 +10,7 @@ require_once('db_connection.php');
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="bootstrap-5.0.1-dist/css/bootstrap.css">
-    <link rel="stylesheet" type="text/css" href="style.css?v=1.6">
+    <link rel="stylesheet" type="text/css" href="style.css?v=1.8">
     <title>Netflix 2.0</title>
 </head>
 <body class="index-page">
@@ -191,6 +191,6 @@ require_once('db_connection.php');
             </div>
         </footer>
     </div>
-    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="bootstrap-5.0.1-dist/js/bootstrap.min.js"></script>
 </body>
 </html>
