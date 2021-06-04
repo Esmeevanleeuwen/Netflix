@@ -4,6 +4,11 @@ require_once('db_connection.php');
 
 $dbh = getDbConnection();
 
+$message = "";
+if(isset($_GET['mmsg']) && $_GET['msg'] == 'login') {
+    $message = "Eerst inloggen aub!";
+}
+
 if (isset($_POST['submit']) && ! empty($_POST['username'])) {
     $email = $_POST['username'];
     $password = $_POST['password'];
@@ -18,7 +23,7 @@ if (isset($_POST['submit']) && ! empty($_POST['username'])) {
     if($row = $result->fetch(PDO::FETCH_ASSOC)) {
         if(password_verify($password, $row['password'])) {
             session_start();
-            $_SESSION['username'] = $username;
+            $_SESSION['username'] = $email;
             header('Location: homePage.php');
         }
         else {
@@ -47,6 +52,7 @@ if (isset($_POST['submit']) && ! empty($_POST['username'])) {
     <div class="container">
         <div class="col-md-12 login-form center">
         <form method="post">
+            <p><?php echo $message; ?></php>
             <h2>Inloggen</h2>
             <br>
             <input class="input-field" type="text" name="username" placeholder="E-mailadres of telefoonnummer">
