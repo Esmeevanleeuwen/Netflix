@@ -306,29 +306,29 @@ footer a {
 .content{
 	margin: 0 auto;
 	width: 90%;
-}
-
-/* Horizontaal kunnen sliden tussen de plaatjes */
-.slide{
+  }
+  
+  /* Horizontaal kunnen sliden tussen de plaatjes */
+  .slide{
 	background-color:#141414;
 	white-space: nowrap;
 	overflow-x: auto;
 	overflow-y: hidden;
-}
-
-/* Titel van de categorie */
-.film{
+  }
+  
+  /* Titel van de categorie */
+  .film{
 	color: white;
 	font-size: 20px;
-}
-
-/* Films plaatjes */
-.films{
+  }
+  
+  /* Films plaatjes */
+  .films{
 	border-radius: 2%;
 	display: inline-block;
 	margin: 0.5%;
 	max-width: 206px;
-}
+  }
 /*footer*/
 .logo{
 	width: 20%;

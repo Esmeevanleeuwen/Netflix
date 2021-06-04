@@ -10,7 +10,7 @@ require_once('db_connection.php');
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="bootstrap-5.0.1-dist/css/bootstrap.css">
-    <link rel="stylesheet" type="text/css" href="style.css?v=1.6">
+    <link rel="stylesheet" type="text/css" href="style.css?v=2.0">
     <title>Netflix 2.0</title>
 </head>
 <body class="index-page">
@@ -24,8 +24,10 @@ require_once('db_connection.php');
                 <h1>Onbeperkt series, films en meer kijken.</h1>
                 <p>Kijk waar je wilt. Altijd opzegbaar.</p>
                 <p class="little-text">Klaar om te kijken? Voer je e-mailadres in om je lidmaatschap te starten of te hernieuwen.</p>
-                <input class="email-field" placeholder="E-mailadres" type="email" name="email">
-                <input class="aanmeld-button" type="submit" value="Aan de slag >">
+                <form method="post" action="aanmelden.php">
+                    <input class="email-field" placeholder="E-mailadres" type="email" name="email1" required="required">
+                    <input class="aanmeld-button" type="submit" value="Aan de slag >">
+                </form>
             </div>
         </div>
         <div class="row space">
@@ -151,8 +153,10 @@ require_once('db_connection.php');
                     </div>
                     <div class="space"></div>
                     <p class="little-text center">Klaar om te kijken? Voer je e-mailadres in om je lidmaatschap te starten of te hernieuwen.</p>
-                    <input class="email-field" placeholder="E-mailadres" type="email" name="email">
-                    <input class="aanmeld-button" type="submit" value="Aan de slag >">
+                    <form method="post" action="aanmelden.php">
+                        <input class="email-field" placeholder="E-mailadres" type="email" name="email1" required="required">
+                        <input class="aanmeld-button" type="submit" value="Aan de slag >">
+                    </form>
                 </div>
                 <div class="space"></div>
             </div>
@@ -191,6 +195,6 @@ require_once('db_connection.php');
             </div>
         </footer>
     </div>
-    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="bootstrap-5.0.1-dist/js/bootstrap.min.js"></script>
 </body>
 </html>
