@@ -52,7 +52,7 @@ if (isset($_POST['submit']) && ! empty($_POST['username'])) {
     <div class="container">
         <div class="col-md-12 login-form center">
         <form method="post">
-            <p><?php echo $message; ?></php>
+            <p><?php echo $message; ?></p>
             <h2>Inloggen</h2>
             <br>
             <input class="input-field" type="text" name="username" placeholder="E-mailadres of telefoonnummer">

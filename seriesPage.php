@@ -72,7 +72,7 @@ require_once('session.php');
 
     //$sql = "SELECT film_id, film_name, film_descr, film_image, category_id FROM films";
     //$sql = "select * from films as f left join categorys as c on f.category_id = c.category_id";
-    $sql = "select * from films as f left join categorys as c on f.category_id = c.category_id";
+    $sql = "select * from series as f left join categorys as c on f.series_category_id = c.category_id";
 
     $q = $connection->prepare($sql);
     $q->execute();

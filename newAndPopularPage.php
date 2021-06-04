@@ -7,14 +7,14 @@ require_once('session.php');
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Bootstrap Example</title>
-  <meta charset="utf-8">
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
-  <link rel="stylesheet" type="text/css" href="style.css?v=1.6">
-  <link rel="stylesheet" type="text/css" href="flickity.css">
-  <link rel="stylesheet" type="text/css" href="slider.css">
+    <title>New And Populair</title>
+    <meta charset="utf-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="bootstrap-5.0.1-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css?v=1.6">
+    <link rel="stylesheet" type="text/css" href="flickity.css">
+    <link rel="stylesheet" type="text/css" href="slider.css">
 
 </head>
 <body>

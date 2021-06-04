@@ -8,6 +8,12 @@ body {
 a {
 	color: #fff;
 }
+
+.netflix-logo a {
+	width: 20%;
+}
+
+
 #trailer-photo {
 	height: 70%;
 	width: 100%;
