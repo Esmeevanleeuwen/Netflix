@@ -7,7 +7,8 @@ $dbh = getDbConnection();
 if (isset($_POST['submit']) && ! empty($_POST['username'])) {
     $email = $_POST['username'];
     $password = $_POST['password'];
-
+    $password_hash = password_hash($password, PASSWORD_DEFAULT);
+    
     $sql = "SELECT email, password
             FROM members
             Where email = '".$email."'";
@@ -15,7 +16,7 @@ if (isset($_POST['submit']) && ! empty($_POST['username'])) {
     $result = $dbh->query($sql);
 
     if($row = $result->fetch(PDO::FETCH_ASSOC)) {
-        if($row['password'] == $password) {
+        if(password_verify($password, $row['password'])) {
             session_start();
             $_SESSION['username'] = $username;
             header('Location: homePage.php');
@@ -23,6 +24,9 @@ if (isset($_POST['submit']) && ! empty($_POST['username'])) {
         else {
             echo '<script>alert("ongeldige login")</script>';
         }
+    }
+    else {
+        echo '<script>alert("ongeldige login")</script>';
     }
 }
 
@@ -33,8 +37,9 @@ if (isset($_POST['submit']) && ! empty($_POST['username'])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="style.css?v=1.7">
+    <link rel="stylesheet" type="text/css" href="bootstrap-5.0.1-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css?v=1.9">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
     <title>Netflix 2.0</title>
 </head>
 <body class="login-page">
@@ -42,14 +47,19 @@ if (isset($_POST['submit']) && ! empty($_POST['username'])) {
     <div class="container">
         <div class="col-md-12 login-form center">
         <form method="post">
-            <h1>Inloggen</h1>
-            <label>Gebruikersnaam</label>
-            <input type="text" name="username">
+            <h2>Inloggen</h2>
             <br>
-            <label>Wachtwoord</label>
-            <input type="password" name="password">
-            <br>
-            <input type="submit" name="submit" value="Verzenden">
+            <input class="input-field" type="text" name="username" placeholder="E-mailadres of telefoonnummer">
+            <br><br>
+            <input class="input-field" type="password" name="password" placeholder="Wachtwoord">
+            <br><br><br>
+            <input class="inlog-button" type="submit" name="submit" value="Inloggen">
+            <br><br>
+            <input class="left" type="checkbox" id="checkbox" name="checkbox" value="Onthouden">
+            <label class="left" for="checkbox">Mijn gegevens onthouden</label>
+            <a class="right" href="">Hulp nodig?</a>
+            <a class="left" href="https://www.facebook.com/">Inloggen met facebook</a>
+            <i class="fab fa-facebook-square"></i>
         </form>
         </div>
     </div>
