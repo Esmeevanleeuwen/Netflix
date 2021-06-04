@@ -1,5 +1,6 @@
 <?php
 include_once('db_connection.php');
+require_once('session.php');
 
 print_r($_GET['id']);
 
