@@ -1,3 +1,9 @@
+<?php
+
+require_once('session.php');
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -42,6 +48,11 @@
         </li>
         <li class="nav-item">
             <a class="nav-link" href="#">mijn lijst</a>
+        </li>
+        <li>
+            <form method="post">
+                <input type="submit" name="logout" value="Uitloggen">
+            </form>
         </li>
     </ul>
 </nav>
