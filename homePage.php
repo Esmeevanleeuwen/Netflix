@@ -89,7 +89,7 @@ require_once('session.php');
 
     foreach ($filmData as $category => $films) {
         echo '<h2>' . $category . '</h2>';
-        echo '<div class="gallery js-flickity">';
+        echo '<div class="gallery js-flickity" >';
         foreach ($films as $film) {
 
             ?>

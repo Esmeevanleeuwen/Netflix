@@ -370,3 +370,17 @@ footer a{
 	text-decoration: none;
 }
 
+.item-image {
+	width: 90%;
+	margin-left: 5%;
+	margin-right: 5%;
+}
+
+.item-text {
+	text-align: center;
+}
+
+.item-text h3 {
+	color: #FFFFFF;
+	font-size: xxx-large;
+}
