@@ -70,8 +70,6 @@ require_once('session.php');
     <?php
     include_once('db_connection.php');
 
-    //$sql = "SELECT film_id, film_name, film_descr, film_image, category_id FROM films";
-    //$sql = "select * from films as f left join categorys as c on f.category_id = c.category_id";
     $sql = "select * from series as f left join categorys as c on f.series_category_id = c.category_id";
 
     $q = $connection->prepare($sql);
@@ -83,22 +81,43 @@ require_once('session.php');
     <?php
     $filmData = array();
     while ($film = $q->fetch()) {
-//    $filmData[$film['category_name']][] = $film;
+
         $filmData[$film['category_name']][] = $film;
     }
 
-    foreach ($filmData as $category => $films) {
+    foreach ($filmData
+
+             as $category => $films) {
         echo '<h2>' . $category . '</h2>';
-        echo '<div class="gallery js-flickity">';
+        echo '<div class="glide" id="' . $category . '">';
+        echo '<div class="glide__track" data-glide-el="track">';
+        echo '<ul class="glide__slides">';
+
         foreach ($films as $film) {
 
             ?>
-<!--            <div class="gallery js-flickity">-->
-                <div class="gallery-cell"><img src="<?php echo $film['film_image']?>"></div>
-<!--            </div>-->
+
+
+            <li class="glide__slide">
+                <a href="item.php?id=<?php echo $film['film_id'] ?>"><img src="<?php echo $film['film_image'] ?>"></a>
+            </li>
+
+
+
 
             <?php
         }
+        echo '</ul>';
+        echo '</div>';?>
+        <div data-glide-el="controls">
+            <button class="glide__arrow glide__arrow--prev glide__arrow glide__arrow--prev" data-glide-dir="<">
+                <span>&#8592;</span>
+            </button>
+            <button class="glide__arrow glide__arrow--next glide__arrow glide__arrow--next" data-glide-dir=">">
+                <span>&#8594;</span>
+            </button>
+        </div>
+        <?php
         echo '</div>';
     }
     ?>
