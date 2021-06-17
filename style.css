@@ -227,7 +227,23 @@ p {
 
 
 /*esmee*/
+.bg-dark{
+	background-color: #000 !important;
+}
 
+.navbar-nav{
+	float: left;
+}
+
+.logo{
+	width: 160px !important;
+}
+
+@media screen and (max-width: 600px){
+	.nav-item{
+		display: none;
+	}
+}
 
 /*footer*/
 footer {
