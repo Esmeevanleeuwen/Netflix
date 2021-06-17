@@ -13,8 +13,11 @@ require_once('session.php');
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="bootstrap-5.0.1-dist/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="style.css?v=1.6">
-    <link rel="stylesheet" type="text/css" href="flickity.css">
-    <link rel="stylesheet" type="text/css" href="slider.css">
+    <!--    <link rel="stylesheet" type="text/css" href="flickity.css">-->
+    <!--    <link rel="stylesheet" type="text/css" href="slider.css">-->
+    <link rel="stylesheet" href="glide-3.4.1/dist/css/glide.core.min.css">
+    <link rel="stylesheet" href="glide-3.4.1/dist/css/glide.theme.css">
+    <!--    <link rel="stylesheet" href="glide-3.4.1/dist/css/glide.theme.min.css">-->
 
 </head>
 <body>
@@ -87,24 +90,42 @@ require_once('session.php');
         $filmData[$film['category_name']][] = $film;
     }
 
-    foreach ($filmData as $category => $films) {
-        echo '<h2>' . $category . '</h2>';
-        echo '<div class="gallery js-flickity" >';
-        foreach ($films as $film) {
+    foreach ($filmData
 
-            ?>
+    as $category => $films) {
+    echo '<h2>' . $category . '</h2>';
+    echo '<div class="glide" id="' . $category . '">';
+    echo '<div class="glide__track" data-glide-el="track">';
+    echo '<ul class="glide__slides">';
 
-            <div class="gallery-cell">
-                <a href="item.php?id=<?php echo $film['film_id']?>">
-                    <img src="<?php echo $film['film_image']?>">
-                </a>
-            </div>
+    foreach ($films as $film) {
 
-            <?php
-        }
-        echo '</div>';
-    }
     ?>
+
+
+        <li class="glide__slide">
+            <a href="item.php?id=<?php echo $film['film_id'] ?>"><img src="<?php echo $film['film_image'] ?>"></a>
+        </li>
+
+
+
+
+<?php
+}
+    echo '</ul>';
+echo '</div>';?>
+    <div data-glide-el="controls">
+        <button class="glide__arrow glide__arrow--prev glide__arrow glide__arrow--prev" data-glide-dir="<">
+            <span>&#8592;</span>
+        </button>
+        <button class="glide__arrow glide__arrow--next glide__arrow glide__arrow--next" data-glide-dir=">">
+            <span>&#8594;</span>
+        </button>
+    </div>
+    <?php
+echo '</div>';
+}
+?>
 </div>
 
 
@@ -141,5 +162,6 @@ require_once('session.php');
 </body>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.20.0/axios.js"></script>
-<script src="flickity.pkgd.min.js"></script>
+<script src="glide-3.4.1/dist/glide.min.js"></script>
+<script src="glider.js"></script>
 </html>

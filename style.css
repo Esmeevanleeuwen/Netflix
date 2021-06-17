@@ -384,3 +384,37 @@ footer a{
 	color: #FFFFFF;
 	font-size: xxx-large;
 }
+
+.glide__slide {
+	position: relative;
+}
+.glide__slide img {
+	max-width: 100%;
+}
+
+button.glide__arrow.glide__arrow--prev.glide__arrow.glide__arrow--prev {
+	left: 1.5rem;
+	font-size: 35px;
+	background: gray;
+	border: 0;
+	border-radius: 50%;
+}
+button.glide__arrow.glide__arrow--prev.glide__arrow.glide__arrow--prev span{
+	color: red;
+	top: -4px;
+	position: relative;
+}
+
+button.glide__arrow.glide__arrow--next.glide__arrow.glide__arrow--next {
+	right: 1.5rem;
+	font-size: 35px;
+	background: gray;
+	border: 0;
+	border-radius: 50%;
+}
+
+button.glide__arrow.glide__arrow--next.glide__arrow.glide__arrow--next span{
+	color: red;
+	top: -4px;
+	position: relative;
+}
