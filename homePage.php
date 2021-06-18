@@ -1,8 +1,4 @@
-<?php
-
-require_once('session.php');
-
-?>
+<?php require_once('session.php'); ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -102,27 +98,49 @@ require_once('session.php');
 
     ?>
 
-
         <li class="glide__slide">
-            <a href="item.php?id=<?php echo $film['film_id'] ?>"><img src="<?php echo $film['film_image'] ?>"></a>
+                <a data-bs-toggle="modal" data-bs-target="#film<?php echo $film['film_id'] ?>">
+                    <img src="<?php echo $film['film_image'] ?>">
+                </a>
         </li>
-
-
-
 
 <?php
 }
     echo '</ul>';
 echo '</div>';?>
-    <div data-glide-el="controls">
-        <button class="glide__arrow glide__arrow--prev glide__arrow glide__arrow--prev" data-glide-dir="<">
-            <span>&#8592;</span>
-        </button>
-        <button class="glide__arrow glide__arrow--next glide__arrow glide__arrow--next" data-glide-dir=">">
-            <span>&#8594;</span>
-        </button>
-    </div>
+        <div data-glide-el="controls">
+            <button class="glide__arrow glide__arrow--prev glide__arrow glide__arrow--prev" data-glide-dir="<">
+                <span>&#8592;</span>
+            </button>
+            <button class="glide__arrow glide__arrow--next glide__arrow glide__arrow--next" data-glide-dir=">">
+                <span>&#8594;</span>
+            </button>
+        </div>
     <?php
+foreach ($films as $film) {
+    ?>
+    <div class="modal fade" id="film<?php echo $film['film_id'] ?>" tabindex="-1" aria-labelledby="film<?php echo $film['film_id'] ?>label" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="film<?php echo $film['film_id'] ?>label"><?php print $film['film_name'] ?></h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="item-text">
+                        <img class="item-image" src="<?php print $film['film_image'] ?>">
+                        <!--<h3 class="item-text">--><?php //print $film['film_name'] ?><!--</h3>-->
+                        <p class="item-text"><?php print $film['film_descr'] ?></p>
+                        <p class="item-text"><?php print $film['film_release']; ?></p>
+                        <p class="item-text"><?php print $film['category_name']; ?></p>
+                        <p class="item-text"><?php echo $film['film_id'] ?></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+        <?php
+}
 echo '</div>';
 }
 ?>
@@ -161,7 +179,8 @@ echo '</div>';
 </footer>
 </body>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.20.0/axios.js"></script>
+<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.20.0/axios.js"></script>-->
+<script type="text/javascript" src="bootstrap-5.0.1-dist/js/bootstrap.min.js"></script>
 <script src="glide-3.4.1/dist/glide.min.js"></script>
 <script src="glider.js"></script>
 </html>

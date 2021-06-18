@@ -20,10 +20,7 @@ $q->execute(array(':film_id' => $_GET['id']));
 $q->setFetchMode(PDO::FETCH_ASSOC);
 
 $filmData = $q->fetch();
-//print_r($filmData);
-//print ($filmData['film_release']);
-//print ($filmData['film_image']);
-//$filmData = array();
+
 
 ?>
 
@@ -37,30 +34,6 @@ $filmData = $q->fetch();
     <p></p>
 </div>
 
-
-<!--//while ($film = $q->fetch()) {-->
-<!--//-->
-<!--//    $filmData[$film['category_name']][] = $film;-->
-<!--//-->
-<!--//}-->
-<!---->
-<!--//foreach ($filmData as $category => $films) {-->
-<!--//    print $film['film_release'];-->
-<!--//-->
-<!--//    foreach ($films as $film) {-->
-<!--//        print $film['film_release'];-->
-<!--//-->
-<!--//        ?>-->
-<!---->
-<!--        <div class="gallery-cell">-->
-<!--            <img src="--><?php //echo $film['film_image']?><!--">-->
-<!--        </div>-->
-<!---->
-<!--        --><?php
-//    }
-//
-//}
-?>
 </div>
 
 
